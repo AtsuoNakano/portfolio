@@ -1,0 +1,312 @@
+/* ----------------------
+
+jquery.scrollify.js
+
+------------------------*/
+
+.pager {
+    position: fixed;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    padding: 0;
+    z-index: 100;
+}
+
+.pager li {
+    display: block;
+}
+
+.pager li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.pager a {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 1px solid #4b4b4b;
+    border-radius: 50%;
+}
+
+.is-current a {
+    background: #232323;
+}
+
+.section {
+    width: 100%;
+    z-index: 11;
+}
+
+.section-content {
+    opacity: 0;
+    transition: opacity .5s ease .75s;
+}
+
+.section.is-show .section-content {
+    opacity: 1;
+}
+
+/* ----------------------
+
+home
+
+------------------------*/
+
+.section-home {
+    position: relative;
+    background: #fff url("../assets/images/top-img01.jpg") fixed;
+}
+
+.scroll-link {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+}
+
+.scroll-link a {
+    position: relative;
+    display: block;
+    padding-bottom: 30px;
+    animation:blink 1.0s ease-in-out infinite alternate;
+}
+
+.scroll-link a:hover {
+    animation: none;
+}
+
+.scroll-link a:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    width: 1px;
+    height: 30px;
+    background: #fff;
+}
+
+@keyframes blink {
+    0% {opacity:.2;}
+    100% {opacity:1;}
+}
+
+.section-home .section-content {
+    height: 100%;
+}
+
+.section-home .section-content .inner {
+    padding: 0;
+    height: 100%;
+}
+
+.home-text-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+}
+
+.home-title {
+    text-align: center;
+    line-height: 1;
+    font-size: 5em;
+}
+
+.name {
+    margin-bottom: 1em;
+    line-height: 1.2;
+}
+.name .name-en {
+    display: block;
+    font-size: 1em;
+}
+
+.name .name-jp {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.name + p {
+    margin-bottom: 1em;
+}
+
+/* ----------------------
+
+about
+
+------------------------*/
+
+.about-img {
+    text-align: center;
+}
+
+.section-about {
+    background-color: #fff;
+}
+
+.about-data {
+    margin-top: 2em;
+    border-top: 1px dashed #333;
+}
+
+.about-data dl {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding: .7em;
+    border-bottom: 1px dashed #333;
+}
+
+.about-data dt,
+.about-data dd {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.about-data dt {
+    width: 7em;
+}
+
+.about-data dd {
+    word-wrap : break-word;
+    overflow-wrap : break-word;
+}
+
+/* ----------------------
+
+works
+
+------------------------*/
+
+.section-works {
+    background-color: #fff;
+}
+
+.works-list li:not(last-child) {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px dashed #333;
+}
+
+.works-list a {
+    display: block;
+    margin-bottom: .5em;
+    font-size: 1.3em;
+    position: relative;
+    padding: 0.7em 0.5em 0.5em 35px;
+    line-height: 1;
+    background: #dbebf8;
+    vertical-align: middle;
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.works-list a:before {
+    content:'';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.works-list a:after {
+    content:'';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    margin-top: -4px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    transform: rotate(45deg);
+}
+
+.works-list a:hover {
+    color: #fff;
+    background: #4b4b4b;
+}
+
+/* ----------------------
+
+contact
+
+------------------------*/
+
+.section-contact {
+    background-color: #fff;
+}
+
+.contact-area {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.contact-list {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+.contact-list li:not(:last-child) {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px dashed #333;
+}
+
+.tel,
+.mail {
+    line-height: 1;
+    font-size: 2em;
+}
+
+.tel-link,
+.mail-link {
+    position: relative;
+    display: block;
+    padding: .3em 0 .2em 42px;
+    background-repeat: no-repeat;
+    background-size: 32px auto;
+    background-position: left center;
+    color: #4b4b4b;
+}
+
+.tel-link {
+    background-image: url(../assets/images/tel.png);
+}
+
+.mail-link {
+    background-image: url(../assets/images/mail.png);
+}
+
+.contact-area + p {
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    
+    .tel,
+    .mail {
+        font-size: 1.5em;
+    }
+
+    .tel-link,
+    .mail-link {
+    }
+
+}

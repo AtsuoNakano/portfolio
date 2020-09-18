@@ -1,0 +1,246 @@
+
+body {
+    background-color: #fff;
+    color: #4b4b4b;
+    font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;
+    max-width: 100%;
+    width: 100%;
+    line-height: 0;
+}
+
+dt {
+    font-weight: normal;
+}
+
+/* ----------------------
+
+wrapper
+
+------------------------*/
+
+.wrapper {
+    overflow: hidden;
+}
+
+/* ----------------------
+
+header
+
+------------------------*/
+
+/* メニュー */
+
+.nav-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: none;
+    background: rgba(0,0,0,.7);
+    z-index: 1000;
+}
+
+.nav-wrapper.open-menu {
+    display: block;
+    height: 100%;
+}
+
+.nav-list {
+    padding-top: 75px;
+}
+
+.nav-list li:first-child a {
+    border-top: 1px solid #fff;
+}
+
+.nav-list a {
+    position: relative;
+    display: block;
+    line-height: 1;
+    padding: .5em .3em;
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+/* ボタン */
+
+.btn-menu {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    line-height: 1;
+    background: transparent;
+    z-index: 10000;
+}
+
+.line1,
+.line2,
+.line3 {
+    content: '';
+    display: block;
+    width: 22px;
+    border-top: 2px solid #fff;
+    position: absolute;
+    left: 10px;
+
+    transition: all .4s ease;
+}
+
+.line1{
+    top: 20px;
+}
+
+.line2{
+    top: 28px;
+}
+
+.line3{
+    top: 12px;
+}
+
+.btn-menu.fixed,
+.btn-menu.fixed .line1,
+.btn-menu.fixed .line2,
+.btn-menu.fixed .line3{
+    border-color: #4b4b4b;
+}
+
+.btn-menu.fixed.btn-batsu,
+.btn-menu.fixed.btn-batsu .line1,
+.btn-menu.fixed.btn-batsu .line2,
+.btn-menu.fixed.btn-batsu .line3 {
+    border-color: #fff;
+}
+
+.btn-menu.btn-batsu .line1 {
+    margin: 0 0 0 10px;
+    opacity: 0;
+    transform: scale(.8);
+}
+
+.btn-menu.btn-batsu .line2 {
+    transform: rotate(-225deg);
+    margin: -8px 0 0 0;
+}
+
+.btn-menu.btn-batsu .line3 {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+    margin: 8px 0 0 0;
+}
+
+/* ----------------------
+
+main
+
+------------------------*/
+
+.main {
+    position: relative;
+}
+
+.inner {
+    position: relative;
+    margin-top: 1px;
+    padding: 4em 2em;
+}
+
+.title {
+    position: relative;
+    margin-bottom: 3em;
+    line-height: 1;
+    text-align: center;
+}
+
+.title-inner {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 0 2.5em;
+    background: #fff;
+}
+
+@media screen and (min-width: 1001px) {
+
+    .title-en {
+        font-size: 4em;
+    }
+
+}
+
+.title:before, .title:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+.title:before {
+    left:0;
+}
+.title:after {
+    right: 0;
+}
+
+.title-en {
+    font-size: 3em;
+}
+
+.title-jp {
+    display: block;  
+    padding-top: .5em;
+    font-size: 1.2em;
+}
+
+.grid-container {
+    overflow: hidden;
+}
+
+
+
+@media screen and (min-width: 1001px) {
+
+    .inner {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1000px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-right: -2em;
+    }
+
+    .grid-box {
+        margin-right: 2em;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .grid-container .grid-box:not(:last-child) {
+        margin-bottom: 2em;
+    }
+
+}
+
